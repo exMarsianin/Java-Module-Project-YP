@@ -22,7 +22,6 @@ public class Calculator {
 
         return String.format("%.2f", sum) + " рубл" + suffix;
     }
-
     public static String getSuffix(double rubles) {
         double numb1 = rubles % 100;
         double numb2 = rubles % 10;
