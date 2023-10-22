@@ -6,11 +6,11 @@ public class Calculator {
     double valueResult;
 
 
-     Calculator(int people){
+    Calculator(int people) {
         this.people = people;
     }
 
-    void addmember(Product product){
+    void addMember(Product product) {
         valueResult += product.productValue;
         names += product.productName + "\n";
     }
@@ -24,12 +24,13 @@ public class Calculator {
     }
 
     public static String getSuffix(double rubles) {
-        if (rubles % 100 >= 11 && rubles%100 <= 14){
+        double numb1 = rubles % 100;
+        double numb2 = rubles % 10;
+        if (numb1 >= 11 && numb1 <= 14) {
             return "ей";
-        }
-        else if (rubles % 10 == 1) {
+        } else if (numb2 == 1) {
             return "ь";
-        } else if (rubles % 10 == 2 || rubles % 10 == 3 || rubles % 10 == 4) {
+        } else if (numb2 == 2 || numb2 == 3 || numb2 == 4) {
             return "я";
         } else {
             return "ей";
